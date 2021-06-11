@@ -2,12 +2,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+const app = createApp(App)
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ElementPlus from 'element-plus';
+import 'element-plus/lib/theme-chalk/index.css';
 
-createApp.use(ElementUI);
+app.use(ElementPlus)
 
-createApp.config.productionTip = false
-
-createApp(App).use(store).use(router).mount('#app')
+app.use(store).use(router).mount('#app')
